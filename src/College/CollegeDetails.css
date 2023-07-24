@@ -1,0 +1,38 @@
+.college-img img {
+  height: 500px;
+  width: 800px;
+}
+
+.event-heading {
+  position: relative;
+  /* left: 150px; */
+}
+
+.sports-heading {
+  position: relative;
+  /* left: 725px; */
+
+}
+
+.ordered-center-list {
+  list-style-type: decimal;
+  padding-left: 0;
+}
+
+.ordered-center-list li {
+  text-align: center;
+}
+
+@media (max-width: 430px) {
+  .college-img img {
+    height: 150px;
+    width: 250px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 770px) {
+  .college-img img {
+    height: 400px;
+    width: 700px;
+  }
+}

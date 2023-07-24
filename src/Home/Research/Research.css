@@ -1,0 +1,15 @@
+.swiper-img img {
+  height: 200px;
+}
+
+@media (max-width: 430px) {
+  .swiper-img img {
+    height: 40px;
+  }
+}
+
+@media (min-width:431px) and (max-width: 770px) {
+  .swiper-img img {
+    height: 120px;
+  }
+}

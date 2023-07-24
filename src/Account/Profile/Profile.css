@@ -1,0 +1,24 @@
+.profile img {
+  height: 300px;
+  width: 250px;
+  border: 1px;
+  border-radius: 100%;
+}
+
+@media (max-width: 430px) {
+  .profile img {
+    height: 150px;
+    width: 120px;
+    border: 1px;
+    border-radius: 100%;
+  }
+}
+
+@media (min-width:431px) and (max-width: 770px) {
+          .profile img {
+            height: 220px;
+            width: 190px;
+            border: 1px;
+            border-radius: 100%;
+          }
+        }
