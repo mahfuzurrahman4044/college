@@ -10,20 +10,27 @@ import img1 from "../../assets/Research/download (1).jpeg";
 import img2 from "../../assets/Research/download (2).jpeg";
 import img3 from "../../assets/Research/download (3).jpeg";
 import img4 from "../../assets/Research/download (4).jpeg";
-import img5 from "../../assets/Research/download (5).jpeg";
 import img6 from "../../assets/Research/download (6).jpeg";
 import img7 from "../../assets/Research/download (7).jpeg";
 import img8 from "../../assets/Research/download.jpeg";
-import img9 from "../../assets/Research/images.jpeg";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Research = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="lg:mt-32">
-      <div>
+    <div className="lg:pt-10 bg-gradient-to-r from-blue-500 to-cyan-500">
+      <div className="lg:py-0 py-4">
         <SectionTitle title={"Research"}></SectionTitle>
       </div>
       <div>
         <Swiper
+          data-aos="zoom-in"
+          data-aos-duration="3000"
           slidesPerView={4}
           spaceBetween={30}
           centeredSlides={true}
@@ -38,7 +45,7 @@ const Research = () => {
             <img src={img1} alt="" />
             <p>
               <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
+
               </a>
             </p>
           </SwiperSlide>
@@ -47,7 +54,7 @@ const Research = () => {
             <img src={img2} alt="" />
             <p>
               <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
+
               </a>
             </p>
           </SwiperSlide>
@@ -56,7 +63,7 @@ const Research = () => {
             <img src={img3} alt="" />
             <p>
               <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
+
               </a>
             </p>
           </SwiperSlide>
@@ -65,16 +72,7 @@ const Research = () => {
             <img src={img4} alt="" />
             <p>
               <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
-              </a>
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-img">
-            <p className="font-semibold">Web 3.0</p>
-            <img src={img5} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
+
               </a>
             </p>
           </SwiperSlide>
@@ -83,7 +81,7 @@ const Research = () => {
             <img src={img6} alt="" />
             <p>
               <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
+
               </a>
             </p>
           </SwiperSlide>
@@ -92,7 +90,7 @@ const Research = () => {
             <img src={img7} alt="" />
             <p>
               <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
+
               </a>
             </p>
           </SwiperSlide>
@@ -101,16 +99,7 @@ const Research = () => {
             <img src={img8} alt="" />
             <p>
               <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
-              </a>
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-img">
-            <p className="font-semibold">Security</p>
-            <img src={img9} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-                Link
+
               </a>
             </p>
           </SwiperSlide>

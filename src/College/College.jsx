@@ -2,23 +2,34 @@ import { useEffect, useState } from "react";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const College = () => {
   const [colleges, setColleges] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/collegeInfo")
+    fetch("https://college-server-dusky.vercel.app/collegeInfo")
       .then((res) => res.json())
       .then((data) => {
         setColleges(data);
       });
   });
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div>
-      <div>
+    <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
+      <div className="lg:py-0 py-4">
         <SectionTitle title={"List of Colleges"}></SectionTitle>
       </div>
-      <div className="grid lg:grid-cols-3 gap-6 lg:pl-20">
+      <div
+        className="grid lg:grid-cols-3 gap-6 lg:pl-20"
+        data-aos="flip-left"
+        data-aos-duration="3000"
+      >
         {colleges.map((college) => (
-          <div key={college._id} className="card lg:w-96 bg-base-200 shadow-lg">
+          <div key={college._id} className="card lg:w-96 bg-gradient-to-r from-blue-600 to-cyan-400 shadow-lg">
             <figure className="px-10 pt-10">
               <img
                 src={college.college_image_link}
@@ -30,7 +41,7 @@ const College = () => {
               <h2 className="card-title">{college.college_name}</h2>
               <p>
                 Admission Date:{" "}
-                <span className="bg-purple-200 p-2 rounded-md font-semibold">
+                <span className="bg-blue-500 p-2 rounded-md font-semibold">
                   {college.admission_date}
                 </span>
               </p>

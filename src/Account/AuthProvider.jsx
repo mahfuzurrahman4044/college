@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import {
   GoogleAuthProvider,
+  RecaptchaVerifier,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPhoneNumber,
   signInWithPopup,
   signOut,
   updateProfile,
@@ -42,6 +44,13 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
+  const captchaVerifier = (number) => {
+    const reCaptcha = new RecaptchaVerifier("recaptcha-container", {}, auth);
+    reCaptcha.render();
+
+    return signInWithPhoneNumber(auth, number, reCaptcha);
+  };
+
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
@@ -65,6 +74,7 @@ const AuthProvider = ({ children }) => {
     updateInfo,
     signIn,
     googleSignIn,
+    captchaVerifier,
     logOut,
   };
   return (

@@ -2,6 +2,10 @@ import { useLoaderData } from "react-router-dom";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import "./CollegeDetails.css";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const CollegeDetails = () => {
   const loadCollege = useLoaderData();
   const {
@@ -19,38 +23,42 @@ const CollegeDetails = () => {
     sports_logo,
     sports_categories,
   } = loadCollege;
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div>
+    <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
       <div>
         <SectionTitle title={"College Details"}></SectionTitle>
       </div>
       <div>
-        <div className="flex justify-center college-img">
+        <div className="flex justify-center college-img" data-aos="zoom-in" data-aos-duration="2000">
           <img className="rounded-lg" src={college_image_link} alt="" />
         </div>
         <h2 className="text-center text-3xl font-bold">{college_name}</h2>
-        <div className="lg:flex justify-around bg-base-200 p-5 my-5 lg:w-1/2 rounded-lg mx-auto">
+        <div className="lg:flex justify-around bg-gradient-to-r from-blue-600 to-cyan-400 p-5 my-5 lg:w-1/2 rounded-lg mx-auto">
           <div>
             Number of Research:{" "}
-            <span className="bg-purple-200 p-2 rounded-md font-semibold">
+            <span className="bg-blue-600 p-2 rounded-md font-semibold">
               {number_of_research}
             </span>
           </div>
           <div className="my-3 lg:my-0">
             Ratings:{" "}
-            <span className="bg-purple-200 p-2 rounded-md font-semibold">
+            <span className="bg-blue-500 p-2 rounded-md font-semibold">
               {college_rating}
             </span>
           </div>
           <div>
             Admission Date:{" "}
-            <span className="bg-purple-200 p-2 rounded-md font-semibold">
+            <span className="bg-blue-500 p-2 rounded-md font-semibold">
               {admission_date}
             </span>
           </div>
         </div>
 
-        <div className="lg:flex justify-center items-center my-10">
+        <div className="lg:flex justify-center items-center my-10" data-aos="fade-right" data-aos-duration="3000">
           <div className="">
             <img className="lg:w-2/3 lg:h-1/2" src={admission_logo} alt="" />
           </div>
@@ -61,9 +69,9 @@ const CollegeDetails = () => {
           </div>
         </div>
 
-        <div className="lg:my-32">
+        <div className="lg:my-32" data-aos="fade-left" data-aos-duration="3000">
           <div className="flex justify-center">
-            <img className="lg:w-1/6 rounded-lg" src={event_logo} alt="" />
+            <img className="lg:w-1/4 rounded-lg" src={event_logo} alt="" />
           </div>
           <div className="lg:w-1/4 mx-auto text-justify mt-5">
             <span className="event-heading text-2xl font-semibold">Events</span>
@@ -72,7 +80,7 @@ const CollegeDetails = () => {
           </div>
         </div>
 
-        <div className="lg:flex justify-center items-center mt-10">
+        <div className="lg:flex justify-center items-center mt-10" data-aos="fade-right" data-aos-duration="3000">
           <div className="">
             <img className="lg:w-2/3 lg:h-1/2" src={research_logo} alt="" />
           </div>
@@ -83,18 +91,20 @@ const CollegeDetails = () => {
           </div>
         </div>
 
-        <div className="lg:mt-32">
+        <div className="lg:mt-32" data-aos="fade-left" data-aos-duration="3000">
           <div className="flex justify-center mt-10">
-            <img className="lg:w-1/6 rounded-lg" src={sports_logo} alt="" />
+            <img className="lg:w-1/4 rounded-lg" src={sports_logo} alt="" />
           </div>
           <div className="text-center mt-5">
-            <span className="sports-heading text-2xl font-semibold">Sports</span>
+            <span className="sports-heading text-2xl font-semibold">
+              Sports
+            </span>
             <br />
             <ol className="ordered-center-list">
-            {sports_categories.map((category, index) => (
-              <li key={index}># {category}</li>
-            ))}
-          </ol>
+              {sports_categories.map((category, index) => (
+                <li key={index}># {category}</li>
+              ))}
+            </ol>
           </div>
         </div>
       </div>

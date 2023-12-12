@@ -3,6 +3,9 @@ import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import { AuthContext } from "../Account/AuthProvider";
 import Swal from "sweetalert2";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const MyClass = () => {
   const { user } = useContext(AuthContext);
   console.log(user?.email);
@@ -19,6 +22,10 @@ const MyClass = () => {
         setLoading(false); // Data fetched, set loading to false
       });
   }, [user?.email]);
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -57,50 +64,45 @@ const MyClass = () => {
   };
 
   return (
-    <div>
+    <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
       <div>
         <SectionTitle title={"My College"}></SectionTitle>
       </div>
 
       <div>
-        <div className="lg:w-3/4 mx-auto">
+        <div
+          className="lg:w-3/4 mx-auto bg-gradient-to-r from-blue-600 to-cyan-400"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
           <table className="table">
             <thead>
               <tr>
-                <th className="text-2xl font-semibold text-black">
+                <th className="border text-center text-2xl font-semibold text-black">
                   College ID
                 </th>
-                <th className="text-2xl font-semibold text-black">
+                <th className="border text-center text-2xl font-semibold text-black">
                   Applied College
                 </th>
-                <th className="text-2xl font-semibold text-black">
+                <th className="border text-center text-2xl font-semibold text-black">
                   Applied Subject
                 </th>
-                {/* <th className="text-2xl font-semibold text-black"></th> */}
               </tr>
             </thead>
             <tbody>
               {colleges.map((college) => (
                 <tr key={college._id}>
-                  <td>
-                    <div className="flex space-x-3">
-                      <div className="avatar">
-                        {/* <div className="mask mask-squircle w-12 h-12">
-                          <img
-                            src={college.college_image_link}
-                            alt="College Avatar"
-                          />
-                        </div> */}
-                      </div>
+                  <td className="border">
+                    <div>
                       <div>
-                        <div className="">{college._id}</div>
+                        <div className="text-center">{college._id}</div>
                       </div>
                     </div>
                   </td>
-                  <td>
+                  <td className="border text-center">
                     <div>{college.college}</div>
                   </td>
-                  <td>{college.subject}</td>
+                  <td className="border text-center">{college.subject}</td>
                 </tr>
               ))}
             </tbody>
@@ -111,9 +113,14 @@ const MyClass = () => {
       <div className="text-center mt-10">
         <h2 className="text-2xl font-semibold">Review</h2>
 
-        <form className="hero" onSubmit={onSubmit}>
+        <form
+          className="hero"
+          onSubmit={onSubmit}
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        >
           <div className="hero-content">
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-blue-600 to-cyan-400">
               <div className="card-body">
                 <div className="form-control">
                   <label className="label">

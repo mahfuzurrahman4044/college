@@ -43,7 +43,7 @@ const Login = () => {
         // console.log(loggedUser);
         const user = { name: loggedUser.name, email: loggedUser.email };
 
-        fetch("http://localhost:5000/users", {
+        fetch("https://college-server-dusky.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -70,15 +70,15 @@ const Login = () => {
       });
   };
   return (
-    <div>
-      <div>
+    <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
+      <div className="lg:py-0 py-4">
         <SectionTitle title={"Log in"}></SectionTitle>
       </div>
 
       <div>
         <div className="hero min-h-screen">
           <div className="hero-content">
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-blue-600 to-cyan-400">
               <form className="card-body" onSubmit={handleSubmit}>
                 <div className="form-control">
                   <label className="label">
@@ -104,7 +104,7 @@ const Login = () => {
                   <label className="label">
                     <Link to="/signup">
                       New to Holizon Education?
-                      <div className="btn btn-primary ml-8 mt-4">
+                      <div className="btn btn-primary lg:ml-8 mt-4 ml-24">
                         Sign Up
                       </div>{" "}
                     </Link>

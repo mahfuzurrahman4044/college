@@ -3,7 +3,7 @@ import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../AuthProvider";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [error, setError] = useState("");
@@ -35,7 +35,7 @@ const SignUp = () => {
             // console.log("User Updated")
             const user = { name: data.name, email: data.email };
             console.log(data.name, data.email);
-            fetch("http://localhost:5000/users", {
+            fetch("https://college-server-dusky.vercel.app/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
@@ -55,8 +55,8 @@ const SignUp = () => {
     }
   };
   return (
-    <div>
-      <div>
+    <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
+      <div className="lg:py-0 py-4">
         <SectionTitle title={"Sign up"}></SectionTitle>
       </div>
 
@@ -64,7 +64,7 @@ const SignUp = () => {
         <div className="hero min-h-screen">
           <div className="hero-content">
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-              <form onSubmit={handleSubmit(handleForm)} className="card-body">
+              <form onSubmit={handleSubmit(handleForm)} className="card-body bg-gradient-to-r from-blue-600 to-cyan-400 rounded-lg">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Name</span>
@@ -174,6 +174,10 @@ const SignUp = () => {
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Sign Up</button>
+                </div>
+                <div className="divider">or</div>
+                <div className="text-center">
+                <Link to="/signup/phone" className="btn btn-primary">Sign Up with Phone</Link>
                 </div>
               </form>
             </div>

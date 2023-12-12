@@ -6,8 +6,8 @@ import "./Profile.css";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div>
-      <div>
+    <div className="bg-gradient-to-r from-blue-600 to-cyan-400 pb-5">
+      <div className="lg:py-0 py-4">
         <SectionTitle title={"Profile"}></SectionTitle>
       </div>
 

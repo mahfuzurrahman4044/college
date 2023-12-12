@@ -1,9 +1,16 @@
 import "./Footer.css";
 import logo from "../../assets/Best-education-consultants-in-Bangladesh-1024x1024-1.jpeg";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Footer = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="">
+    <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
       <footer className="footer footer-center p-10">
         <div className="end">
           <img src={logo} alt="" />

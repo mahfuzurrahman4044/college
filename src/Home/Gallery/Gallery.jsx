@@ -14,101 +14,26 @@ import img7 from "../../assets/Gallary/Group-Photo-with-Ambassador-1140x684.jpg"
 import img8 from "../../assets/Gallary/download.jpeg";
 import img9 from "../../assets/Gallary/shutterstock_658847998.jpg";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Gallery = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="lg:mt-32">
-      <div>
+    <div className="lg:pt-10 bg-gradient-to-r from-blue-500 to-cyan-500">
+      <div className="lg:py-0 py-4">
         <SectionTitle title={"Gallery"}></SectionTitle>
       </div>
-      {/* <div>
-        <div className="carousel w-full">
-          <div
-            id="item1"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img1} className="w-full" />
-          </div>
-          <div
-            id="item2"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img2} className="w-full" />
-          </div>
-          <div
-            id="item3"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img3} className="w-full" />
-          </div>
-          <div
-            id="item4"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img4} className="w-full" />
-          </div>
-          <div
-            id="item5"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img5} className="w-full" />
-          </div>
-          <div
-            id="item6"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img6} className="w-full" />
-          </div>
-          <div
-            id="item7"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img7} className="w-full" />
-          </div>
-          <div
-            id="item8"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img8} className="w-full" />
-          </div>
-          <div
-            id="item9"
-            className="carousel-img flex justify-center carousel-item w-full"
-          >
-            <img src={img9} className="w-full" />
-          </div>
-        </div>
-        <div className="flex justify-center w-full py-2 gap-2">
-          <a href="#item1" className="btn btn-xs">
-            1
-          </a>
-          <a href="#item2" className="btn btn-xs">
-            2
-          </a>
-          <a href="#item3" className="btn btn-xs">
-            3
-          </a>
-          <a href="#item4" className="btn btn-xs">
-            4
-          </a>
-          <a href="#item5" className="btn btn-xs">
-            4
-          </a>
-          <a href="#item6" className="btn btn-xs">
-            4
-          </a>
-          <a href="#item7" className="btn btn-xs">
-            4
-          </a>
-          <a href="#item8" className="btn btn-xs">
-            4
-          </a>
-          <a href="#item9" className="btn btn-xs">
-            9
-          </a>
-        </div>
-      </div> */}
-      <div>
-        <Carousel className="mx-5 slideRes" data-aos="fade-up">
+
+      <div
+        className="mx-5 slideRes"
+        data-aos="zoom-in"
+        data-aos-duration="3000"
+      >
+        <Carousel className="lg:px-56">
           <div className="slider-img">
             <img className="rounded-md" src={img1} />
           </div>

@@ -1,10 +1,17 @@
 import { useLoaderData } from "react-router-dom";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../Account/AuthProvider";
 import Swal from "sweetalert2";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const AdmissionForm = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const collegeInfo = useLoaderData();
   const { college_name } = collegeInfo;
   const { user } = useContext(AuthContext);
@@ -35,7 +42,7 @@ const AdmissionForm = () => {
     };
     //     console.log(addCollege);
 
-    fetch("http://localhost:5000/addCollege", {
+    fetch("https://college-server-dusky.vercel.app/addCollege", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -58,7 +65,7 @@ const AdmissionForm = () => {
       });
   };
   return (
-    <div>
+    <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
       <div>
         <SectionTitle title={"Admission Form"}></SectionTitle>
       </div>
@@ -67,7 +74,7 @@ const AdmissionForm = () => {
         <div className="">
           <div className="hero min-h-screen">
             <div className="hero-content">
-              <form className="card-body text-center" onSubmit={btnSubmit}>
+              <form className="card-body text-center bg-gradient-to-r from-blue-600 to-cyan-400 rounded-md" onSubmit={btnSubmit}>
                 <div className="grid lg:grid-cols-4">
                   <div className="form-control">
                     <label className="label">

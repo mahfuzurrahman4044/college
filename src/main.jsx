@@ -15,6 +15,7 @@ import AuthProvider from "./Account/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import AdmissionForm from "./Admission/AdmissionForm";
 import Profile from "./Account/Profile/Profile";
+import Phone from "./Account/Phone/Phone";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/collegeInfo/${params.id}`),
+          fetch(`https://college-server-dusky.vercel.app/collegeInfo/${params.id}`),
       },
       {
         path: "/admission",
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/collegeInfo/${params.id}`),
+          fetch(`https://college-server-dusky.vercel.app/collegeInfo/${params.id}`),
       },
       {
         path: "/myClass",
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <SignUp></SignUp>,
       },
+      {
+        path: "/signup/phone",
+        element: <Phone></Phone>,
+      }
     ],
   },
 ]);
