@@ -11,14 +11,20 @@ const Profile = () => {
         <SectionTitle title={"Profile"}></SectionTitle>
       </div>
 
-      <div>
-        <div className="flex justify-center profile">
-          <img src={user?.photoURL} alt="" />
+      <div className="text-center">
+        <div className="flex justify-center">
+          <img
+            className="lg:w-36 w-20 lg:h-36 h-20 rounded-full"
+            src={user?.photoURL}
+            alt=""
+          />
         </div>
-        <h2 className="text-2xl font-semibold flex justify-center">
+        <div className="lg:text-4xl text-2xl font-semibold mt-6">
           {user?.displayName}
-        </h2>
-        <h3 className="flex justify-center">{user?.email}</h3>
+        </div>
+        <p>
+          Email: <span className="lg:text-3xl">{user?.email}</span>
+        </p>
       </div>
     </div>
   );

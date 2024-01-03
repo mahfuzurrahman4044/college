@@ -42,7 +42,7 @@ const Research = () => {
         >
           <SwiperSlide className="swiper-img">
             <p className="font-semibold">Powerful Chip</p>
-            <img src={img1} alt="" />
+            <img className="" src={img1} alt="" />
             <p>
               <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
 

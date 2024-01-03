@@ -38,7 +38,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://college-server-dusky.vercel.app/collegeInfo/${params.id}`),
+          fetch(
+            `https://college-server-dusky.vercel.app/collegeInfo/${params.id}`
+          ),
       },
       {
         path: "/admission",
@@ -52,7 +54,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://college-server-dusky.vercel.app/collegeInfo/${params.id}`),
+          fetch(
+            `https://college-server-dusky.vercel.app/collegeInfo/${params.id}`
+          ),
       },
       {
         path: "/myClass",
@@ -64,7 +68,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile></Profile>,
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -77,7 +85,7 @@ const router = createBrowserRouter([
       {
         path: "/signup/phone",
         element: <Phone></Phone>,
-      }
+      },
     ],
   },
 ]);

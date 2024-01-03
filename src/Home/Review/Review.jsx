@@ -39,7 +39,7 @@ const Review = () => {
       </div>
 
       <div
-        className="lg:w-1/2 mx-auto bg-gradient-to-r from-blue-600 to-cyan-400 rounded-md p-20"
+        className="lg:w-1/2 w-5/6 mx-auto bg-gradient-to-r from-blue-600 to-cyan-400 rounded-md p-20"
         data-aos="fade-left" data-aos-duration="3000"
       >
         <div className="carousel-container">
@@ -57,7 +57,7 @@ const Review = () => {
               </span>{" "}
               out of 5
             </h3>
-            <p>
+            <p className=" text-justify">
               Review:{" "}
               <span className="lg:text-2xl font-semibold">
                 {currentReview?.review}
@@ -66,7 +66,7 @@ const Review = () => {
           </div>
         </div>
 
-        <div className="carousel-navigation">
+        <div className="carousel-navigation ps-10 lg:ps-0">
           <button
             className="btn- btn-primary p-3 rounded-md my-2"
             onClick={handlePrevReview}
@@ -74,7 +74,7 @@ const Review = () => {
             Previous
           </button>
           <button
-            className="btn- btn-primary p-3 rounded-md my-2 ml-4 lg:ml-96"
+            className="btn- btn-primary p-3 rounded-md my-2 ml-4 lg:ml-80 relative lg:left-32"
             onClick={handleNextReview}
           >
             Next

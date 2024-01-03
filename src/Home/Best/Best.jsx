@@ -28,11 +28,11 @@ const Best = () => {
       <div className="lg:py-0 py-4">
         <SectionTitle title={"Best Colleges"}></SectionTitle>
       </div>
-      <div className="grid lg:grid-cols-3 gap-6 lg:pl-20" data-aos="flip-left" data-aos-duration="2500">
+      <div className="grid lg:grid-cols-3 gap-6 lg:pl-20 px-5 lg:px-0">
         {bestColleges.map((bestCollege) => (
           <div
             key={bestCollege._id}
-            className="card lg:w-96  bg-gradient-to-r from-blue-600 to-cyan-400 shadow-lg"
+            className="card lg:w-96 bg-gradient-to-r from-blue-600 to-cyan-400 shadow-lg"  data-aos="flip-left" data-aos-duration="2500"
           >
             <figure className="px-10 pt-10">
               <img

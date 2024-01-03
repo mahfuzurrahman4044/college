@@ -20,16 +20,16 @@ const College = () => {
   }, []);
   return (
     <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
-      <div className="lg:py-0 py-4">
+      <div className="lg:pt-0 pt-48 lg:py-0 py-5">
         <SectionTitle title={"List of Colleges"}></SectionTitle>
       </div>
       <div
-        className="grid lg:grid-cols-3 gap-6 lg:pl-20"
-        data-aos="flip-left"
-        data-aos-duration="3000"
+        className="grid lg:grid-cols-3 gap-6 lg:pl-20 px-5 lg:px-0"
+
       >
         {colleges.map((college) => (
-          <div key={college._id} className="card lg:w-96 bg-gradient-to-r from-blue-600 to-cyan-400 shadow-lg">
+          <div key={college._id} className="card lg:w-96 bg-gradient-to-r from-blue-600 to-cyan-400 shadow-lg" data-aos="flip-left"
+          data-aos-duration="2500">
             <figure className="px-10 pt-10">
               <img
                 src={college.college_image_link}

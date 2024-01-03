@@ -29,7 +29,7 @@ const Gallery = () => {
       </div>
 
       <div
-        className="mx-5 slideRes"
+        className="mx-5"
         data-aos="zoom-in"
         data-aos-duration="3000"
       >
