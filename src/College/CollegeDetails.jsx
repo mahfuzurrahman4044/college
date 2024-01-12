@@ -33,10 +33,16 @@ const CollegeDetails = () => {
         <SectionTitle title={"College Details"}></SectionTitle>
       </div>
       <div>
-        <div className="flex justify-center college-img" data-aos="zoom-in" data-aos-duration="2000">
+        <div
+          className="flex justify-center college-img"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+        >
           <img className="rounded-lg" src={college_image_link} alt="" />
         </div>
-        <h2 className="text-center text-3xl font-bold">{college_name}</h2>
+        <h2 className="text-center text-3xl font-bold lg:mt-6 mt-2">
+          {college_name}
+        </h2>
         <div className="lg:flex justify-around bg-gradient-to-r from-blue-600 to-cyan-400 p-5 my-5 lg:w-1/2 w-5/6 rounded-lg mx-auto">
           <div>
             Number of Research:{" "}
@@ -58,7 +64,11 @@ const CollegeDetails = () => {
           </div>
         </div>
 
-        <div className="lg:flex justify-center items-center my-10" data-aos="fade-right" data-aos-duration="3000">
+        <div
+          className="lg:flex justify-center items-center my-10"
+          data-aos="fade-right"
+          data-aos-duration="3000"
+        >
           <div className="px-5 lg:px-0">
             <img className="lg:w-2/3 lg:h-1/2" src={admission_logo} alt="" />
           </div>
@@ -71,7 +81,11 @@ const CollegeDetails = () => {
 
         <div className="lg:my-32" data-aos="fade-left" data-aos-duration="3000">
           <div className="flex justify-center">
-            <img className="lg:w-1/4 px-5 lg:px-0 rounded-lg" src={event_logo} alt="" />
+            <img
+              className="lg:w-1/4 px-5 lg:px-0 rounded-lg"
+              src={event_logo}
+              alt=""
+            />
           </div>
           <div className="lg:w-1/4 mx-auto text-justify mt-5 px-5 lg:px-0">
             <span className="event-heading text-2xl font-semibold">Events</span>
@@ -80,9 +94,17 @@ const CollegeDetails = () => {
           </div>
         </div>
 
-        <div className="lg:flex justify-center items-center mt-10" data-aos="fade-right" data-aos-duration="3000">
+        <div
+          className="lg:flex justify-center items-center mt-10"
+          data-aos="fade-right"
+          data-aos-duration="3000"
+        >
           <div className="">
-            <img className="lg:w-2/3 lg:h-1/2 px-5 lg:px-0" src={research_logo} alt="" />
+            <img
+              className="lg:w-2/3 lg:h-1/2 px-5 lg:px-0"
+              src={research_logo}
+              alt=""
+            />
           </div>
           <div className="lg:w-1/3 text-justify px-5 lg:px-0">
             <span className="text-2xl font-semibold">Research</span>
@@ -93,7 +115,11 @@ const CollegeDetails = () => {
 
         <div className="lg:mt-32" data-aos="fade-left" data-aos-duration="3000">
           <div className="flex justify-center mt-10">
-            <img className="lg:w-1/4 rounded-lg px-5 lg:px-0" src={sports_logo} alt="" />
+            <img
+              className="lg:w-1/4 rounded-lg px-5 lg:px-0"
+              src={sports_logo}
+              alt=""
+            />
           </div>
           <div className="text-center mt-5">
             <span className="sports-heading text-2xl font-semibold">
@@ -102,7 +128,11 @@ const CollegeDetails = () => {
             <br />
             <ol className="ordered-center-list">
               {sports_categories.map((category, index) => (
-                <li key={index}># {category}</li>
+                <li key={index}>
+                  {index + 1}
+                  {". "}
+                  {category}
+                </li>
               ))}
             </ol>
           </div>
