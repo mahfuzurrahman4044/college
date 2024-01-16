@@ -33,7 +33,7 @@ const Gallery = () => {
         data-aos="zoom-in"
         data-aos-duration="3000"
       >
-        <Carousel className="lg:px-56">
+        <Carousel className="lg:px-80">
           <div className="slider-img">
             <img className="rounded-md" src={img1} />
           </div>

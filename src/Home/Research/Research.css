@@ -1,15 +1,17 @@
 .swiper-img img {
-  height: 200px;
+  height: 300px;
 }
-
+.research {
+  margin-top: -20px;
+}
 @media (max-width: 430px) {
   .swiper-img img {
-    height: 100px;
+    height: 90px;
   }
 }
 
-@media (min-width:431px) and (max-width: 770px) {
+@media (min-width: 431px) and (max-width: 770px) {
   .swiper-img img {
-    height: 120px;
+    height: 100px;
   }
 }

@@ -23,7 +23,7 @@ const Research = () => {
     Aos.init();
   }, []);
   return (
-    <div className="lg:pt-10 bg-gradient-to-r from-blue-500 to-cyan-500">
+    <div className="lg:pt-10 bg-gradient-to-r from-blue-500 to-cyan-500 research">
       <div className="lg:py-0 py-4">
         <SectionTitle title={"Research"}></SectionTitle>
       </div>
@@ -41,67 +41,32 @@ const Research = () => {
           className="mySwiper"
         >
           <SwiperSlide className="swiper-img">
-            <p className="font-semibold">Powerful Chip</p>
-            <img className="" src={img1} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-
-              </a>
-            </p>
+            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">Powerful Chip</p>
+            <img className="rounded-md" src={img1} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="font-semibold">5G Network</p>
-            <img src={img2} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-
-              </a>
-            </p>
+            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">5G Network</p>
+            <img className="rounded-md" src={img2} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="font-semibold">New Topology</p>
-            <img src={img3} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-
-              </a>
-            </p>
+            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">New Topology</p>
+            <img className="rounded-md" src={img3} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="font-semibold">Cancer Cell</p>
-            <img src={img4} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-
-              </a>
-            </p>
+            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">Cancer Cell</p>
+            <img className="rounded-md" src={img4} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="font-semibold">Powerful CPU</p>
-            <img src={img6} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-
-              </a>
-            </p>
+            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">Powerful CPU</p>
+            <img className="rounded-md" src={img6} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="font-semibold">Artificial Intelligence</p>
-            <img src={img7} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-
-              </a>
-            </p>
+            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">Artificial Intelligence</p>
+            <img className="rounded-md" src={img7} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="font-semibold">AIDS Vaccine</p>
-            <img src={img8} alt="" />
-            <p>
-              <a href="https://techresearchonline.com/blog/ai-regulation-meet-at-white-house/">
-
-              </a>
-            </p>
+            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">AIDS Vaccine</p>
+            <img className="rounded-md" src={img8} alt="" />
           </SwiperSlide>
         </Swiper>
       </div>

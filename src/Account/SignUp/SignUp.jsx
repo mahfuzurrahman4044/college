@@ -57,7 +57,7 @@ const SignUp = () => {
   return (
     <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
       <div className="lg:py-0 py-4">
-        <SectionTitle title={"Sign up"}></SectionTitle>
+        <SectionTitle title={"Sign Up"}></SectionTitle>
       </div>
 
       <div>
