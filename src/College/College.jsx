@@ -24,7 +24,7 @@ const College = () => {
         <SectionTitle title={"List of Colleges"}></SectionTitle>
       </div>
       <div
-        className="grid lg:grid-cols-3 gap-6 lg:pl-20 px-5 lg:px-0"
+        className="grid lg:grid-cols-3 gap-6 lg:pl-5 px-5 lg:px-0"
 
       >
         {colleges.map((college) => (

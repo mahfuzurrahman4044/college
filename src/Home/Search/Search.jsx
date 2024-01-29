@@ -70,7 +70,7 @@ const Search = () => {
         </div>
       </div>
       {searchText && filteredColleges.length > 0 ? (
-        <div className="grid lg:grid-cols-3 gap-6 lg:pt-5 lg:pl-20">
+        <div className="grid lg:grid-cols-3 gap-6 lg:pt-5 lg:pl-5 lg:px-0 px-5">
           {filteredColleges.map((college) => (
             <div
               key={college._id}

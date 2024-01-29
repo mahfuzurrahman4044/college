@@ -69,9 +69,9 @@ const MyClass = () => {
         <SectionTitle title={"My College"}></SectionTitle>
       </div>
 
-      <div>
+      <div className="">
         <div
-          className="lg:w-3/4 mx-auto bg-gradient-to-r from-blue-600 to-cyan-400"
+          className="lg:w-3/4 mx-auto bg-gradient-to-r from-blue-600 to-cyan-400 overflow-auto "
           data-aos="fade-right"
           data-aos-duration="1500"
         >
@@ -111,8 +111,7 @@ const MyClass = () => {
       </div>
 
       <div className="text-center mt-10">
-        <h2 className="text-2xl font-semibold">Review</h2>
-
+        <SectionTitle title={"Review"}></SectionTitle>
         <form
           className="hero"
           onSubmit={onSubmit}

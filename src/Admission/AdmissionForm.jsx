@@ -66,7 +66,7 @@ const AdmissionForm = () => {
   };
   return (
     <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
-      <div>
+      <div className="lg:pt-0 pt-48">
         <SectionTitle title={"Admission Form"}></SectionTitle>
       </div>
 

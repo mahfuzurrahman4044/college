@@ -41,31 +41,31 @@ const Research = () => {
           className="mySwiper"
         >
           <SwiperSlide className="swiper-img">
-            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">Powerful Chip</p>
+            <p className="font-semibold lg:text-2xl lg:py-2">Powerful Chip</p>
             <img className="rounded-md" src={img1} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">5G Network</p>
+            <p className="font-semibold lg:text-2xl lg:py-2">5G Network</p>
             <img className="rounded-md" src={img2} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">New Topology</p>
+            <p className="font-semibold lg:text-2xl lg:py-2">New Topology</p>
             <img className="rounded-md" src={img3} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">Cancer Cell</p>
+            <p className="font-semibold lg:text-2xl lg:py-2">Cancer Cell</p>
             <img className="rounded-md" src={img4} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">Powerful CPU</p>
+            <p className="font-semibold lg:text-2xl lg:py-2">Powerful CPU</p>
             <img className="rounded-md" src={img6} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">Artificial Intelligence</p>
+            <p className="font-semibold lg:text-2xl lg:py-2">Artificial Intelligence</p>
             <img className="rounded-md" src={img7} alt="" />
           </SwiperSlide>
           <SwiperSlide className="swiper-img">
-            <p className="lg:font-bold font-semibold lg:text-2xl lg:py-2">AIDS Vaccine</p>
+            <p className="font-semibold lg:text-2xl lg:py-2">AIDS Vaccine</p>
             <img className="rounded-md" src={img8} alt="" />
           </SwiperSlide>
         </Swiper>

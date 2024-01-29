@@ -74,7 +74,7 @@ const Review = () => {
             Previous
           </button>
           <button
-            className="btn- btn-primary p-3 rounded-md my-2 ml-4 lg:ml-80 relative lg:left-32"
+            className="btn- btn-primary p-3 rounded-md my-2 ml-4 lg:ml-52 relative lg:left-32"
             onClick={handleNextReview}
           >
             Next

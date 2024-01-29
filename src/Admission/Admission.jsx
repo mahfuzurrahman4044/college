@@ -27,7 +27,7 @@ const Admission = () => {
       </div>
 
       <div>
-        <div className="lg:w-4/5 mx-auto">
+        <div className="lg:w-4/5 mx-auto overflow-auto lg:px-0 px-5">
           <table className="table border">
             <thead>
               <tr>

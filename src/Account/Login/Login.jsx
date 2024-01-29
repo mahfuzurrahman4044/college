@@ -71,7 +71,7 @@ const Login = () => {
   };
   return (
     <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
-      <div className="lg:py-0 py-4">
+      <div className="lg:py-0 py-4 lg:pt-0 pt-48">
         <SectionTitle title={"Log In"}></SectionTitle>
       </div>
 

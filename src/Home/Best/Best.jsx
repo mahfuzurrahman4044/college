@@ -28,7 +28,7 @@ const Best = () => {
       <div className="lg:py-0 py-4">
         <SectionTitle title={"Best Colleges"}></SectionTitle>
       </div>
-      <div className="grid lg:grid-cols-3 gap-6 lg:pl-20 px-5 lg:px-0">
+      <div className="grid lg:grid-cols-3 gap-6 lg:pl-5 px-5 lg:px-0">
         {bestColleges.map((bestCollege) => (
           <div
             key={bestCollege._id}
